@@ -28,14 +28,18 @@ class School:
             if s.get_gpa() > min_gpa:
                 passed_students.append(s)
 
-        # print student's name who graduated.
+    def list_of_graduated_students(self):
         print('*** Student who graduated *** ')
         for s in passed_students:
             print(s.name)
         print('****************************')
+
+    def send_emails(self, passed_students)
         # Send congrat emails to them.
         for s in passed_students:
             s.send_congrat_email()
+            
+    def send_10per_to_employers(self):
         # Find the top 10% of them and send their contact to the top employers
         passed_students.sort(key=lambda s: s.get_gpa())
         percentile = 0.9
